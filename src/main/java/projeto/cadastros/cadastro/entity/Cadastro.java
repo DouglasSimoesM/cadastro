@@ -15,6 +15,7 @@ public class Cadastro {
     private String telefone;
     private String email;
 
+<<<<<<< HEAD
     public Cadastro() {
     }
 
@@ -28,6 +29,8 @@ public class Cadastro {
         this.email = email;
     }
 
+=======
+>>>>>>> 314908c836ba1d7952fa294e9218fa5c8ac8c6ed
     public Long getId() {
         return id;
     }

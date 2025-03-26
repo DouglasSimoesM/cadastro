@@ -1,5 +1,6 @@
 package projeto.cadastros.cadastro.entity;
 
+<<<<<<< HEAD
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,10 +15,20 @@ public class CadastroSimplificado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
+=======
+import jakarta.persistence.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "cadastros_simplificados")
+public class CadastroSimplificado {
+    @Id
+    private String id;
+>>>>>>> 314908c836ba1d7952fa294e9218fa5c8ac8c6ed
     private String nome;
     private String cpf;
     private String setor;
 
+<<<<<<< HEAD
     public CadastroSimplificado() {
     }
 
@@ -29,6 +40,8 @@ public class CadastroSimplificado {
     }
 
 
+=======
+>>>>>>> 314908c836ba1d7952fa294e9218fa5c8ac8c6ed
     public String getId() {
         return id;
     }
