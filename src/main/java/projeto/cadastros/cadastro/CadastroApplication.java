@@ -10,8 +10,4 @@ public class CadastroApplication {
 		SpringApplication.run(CadastroApplication.class, args);
 	}
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 314908c836ba1d7952fa294e9218fa5c8ac8c6ed
