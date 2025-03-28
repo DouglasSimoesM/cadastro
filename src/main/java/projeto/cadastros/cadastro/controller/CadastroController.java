@@ -1,5 +1,6 @@
 package projeto.cadastros.cadastro.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import projeto.cadastros.cadastro.entity.Cadastro;
@@ -18,6 +19,7 @@ import projeto.cadastros.cadastro.service.CadastroService;
 @RestController
 @RequestMapping("/cadastros")
 public class CadastroController {
+    @Autowired
     private final CadastroService cadastroService;
 
     public CadastroController(CadastroService cadastroService) {

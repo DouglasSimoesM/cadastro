@@ -1,5 +1,6 @@
 package projeto.cadastros.cadastro.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,7 +14,10 @@ import java.util.List;
 
 @Service
 public class CadastroService {
+
+    @Autowired
     private final CadastroRepository cadastroRepository;
+    @Autowired
     private final CadastroSimplificadoRepository cadastroSimplificadoRepository;
 
     public CadastroService(CadastroRepository cadastroRepository, CadastroSimplificadoRepository cadastroSimplificadoRepository) {
