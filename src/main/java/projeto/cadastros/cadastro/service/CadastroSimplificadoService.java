@@ -3,7 +3,6 @@ package projeto.cadastros.cadastro.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import projeto.cadastros.cadastro.entity.Cadastro;
 import projeto.cadastros.cadastro.entity.CadastroSimplificado;
 import projeto.cadastros.cadastro.repository.CadastroSimplificadoRepository;
 
