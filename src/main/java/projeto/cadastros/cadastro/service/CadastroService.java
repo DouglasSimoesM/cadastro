@@ -43,6 +43,37 @@ public class CadastroService {
         return saved;
     }
 
+    public Cadastro atualizarCadastros(String cpf, Cadastro cadastro){
+        var cadastroExistente = cadastroRepository.findByCpf(cpf);
+
+        if (cadastroExistente.isPresent()){
+            Cadastro atualizado = cadastroExistente.get();
+            atualizado.setNome(cadastro.getNome());
+            atualizado.setCpf(cadastro.getCpf());
+            atualizado.setSetor(cadastro.getSetor());
+            atualizado.setEndereco(cadastro.getEndereco());
+            atualizado.setTelefone(cadastro.getTelefone());
+            atualizado.setEmail(cadastro.getEmail());
+
+            cadastroRepository.save(atualizado);
+
+            CadastroSimplificado simplificado = cadastroSimplificadoRepository.findByCpf(cpf)
+                    .orElse(new CadastroSimplificado());
+
+            simplificado.setNome(atualizado.getNome());
+            simplificado.setCpf(atualizado.getCpf());
+            simplificado.setSetor(atualizado.getSetor());
+
+            cadastroSimplificadoRepository.save(simplificado);
+
+            return atualizado;
+        }
+
+        throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "CPF não encontrado.");
+    }
+
+
+
     @Transactional(readOnly = true)
     public List<Cadastro> findAll(){
         List<Cadastro> cadastros = cadastroRepository.findAll();

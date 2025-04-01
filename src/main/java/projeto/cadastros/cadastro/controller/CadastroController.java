@@ -36,4 +36,11 @@ public class CadastroController {
         List<Cadastro> resultado = cadastroService.findAll();
         return ResponseEntity.ok(resultado);
     }
+
+    @PutMapping("/{cpf}")
+    public ResponseEntity<Cadastro> atualizar(@PathVariable String cpf, @RequestBody Cadastro cadastro){
+        Cadastro atualizado = cadastroService.atualizarCadastros(cpf, cadastro);
+        return ResponseEntity.ok(atualizado);
+    }
+
 }
