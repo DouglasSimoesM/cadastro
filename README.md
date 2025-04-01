@@ -16,7 +16,6 @@ Esta API foi desenvolvida em **Java Spring Boot** com o objetivo de permitir que
 - Java 21
 - Spring Boot
 - Spring Data JPA
-- Spring Data MongoDB
 - PostgreSQL
 - MongoDB
 - Spring Security com JWT
