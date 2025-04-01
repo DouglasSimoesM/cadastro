@@ -74,9 +74,9 @@ Para acessar as rotas protegidas, é necessário obter um token JWT. Para isso:
 2. Autentique-se via **POST /auth/login**
 3. Use o token recebido no cabeçalho **Authorization: Bearer {token}**
 
-## Como Usar a API (Com Video Demonstrativo)
+## Como Usar a API [Clique aqui](https://photos.app.goo.gl/bZBoSJWTUuY9DWw26)
 
-Um **vídeo tutorial** demonstrando como utilizar a API estará disponível em breve!
+Um **vídeo tutorial** demonstrando como utilizar a API
 
 ---
 
